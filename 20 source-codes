@@ -1,0 +1,524 @@
+#include<stdio.h>
+#include<conio.h>
+
+
+/*
+//program to add two Integers using functions
+int add(int x, int y)	//function initialization
+{
+	return (x+y);		//returning value
+}
+void main()		//execution starts from main() function
+{
+	clrscr();	//clear previous output
+	int a,b,c;		//variables declarations
+	printf("\nEnter the value of a and b followed by a space :");
+	scanf("%d %d",&a,&b);		//scanning & storing
+	c = add(a,b);			//function call with parameter
+	printf("\n%d + %d = %d",a,b,c);		//printing values of variables
+	getch();				//hold output screen
+}
+*/
+
+
+
+/*
+//Program to Swap Two numbers
+void main()
+{
+	clrscr();
+	int a,b;        	//declaration
+	printf("Enter Two integers Number to swap their Values : ");
+	scanf("%d %d",&a,&b);                //scanning & storing
+	printf("\nBefore swapping values are \na = %d \nb = %d: ",a,b);
+	a = a + b ;		//Swapping values
+	b = a - b ;		//a=10 , b=20
+	a = a - b ;             //a=30 , b=10
+	printf("\nAfter Swapping values are \na = %d\nb = %d ",a,b);
+	getch();
+}
+*/
+
+
+
+
+/*
+//Program to Check whether a number is even or odd
+findevod(int n)                         //function initialization
+{
+	if(n % 2 == 0)		//if condition
+		printf("\n%d is an Even Number",n); 	//printf if n = even
+	else
+		printf("\n%d is an Odd Number",n);	//printf if n = odd
+}
+void main()
+{
+	clrscr();
+	int num;                    //declaration
+	printf("\nEnter number to Check Even or Odd : ");
+	scanf("%d",&num);		//scanning and storing
+	findevod(num);		//function call with parameter
+	getch();
+}
+*/
+
+
+
+
+/*
+//Program to Check Largest Numbers among Three Numbers
+void main()
+{
+	clrscr();
+	int a,b,c;      //declaration
+	printf("\nEnter values of a , b , c : ");
+	scanf("%d %d %d",&a,&b,&c);	//scanning and storing
+	if(a>b)		//if condition
+	{
+		if(a>c)               //nested if condition
+			printf("\n%d i.e a is the Biggest number",a);
+		else		      //if condition false then else executes
+			printf("\n%d i.e c is the Biggest number",c);
+	}
+	else
+	{
+		if(b>c)		//nested else if
+			printf("\n%d i.e. b is the Biggest number",b);
+		else
+			printf("\n%d i.e. c is the Biggest number",c);
+	}
+	getch();
+}
+*/
+
+
+
+
+/*
+//program to find factorial of a given number
+int factorial(int x)		//function initialization  OR function with formal parameter
+{
+	if(x == 0 || x == 1)	//if condition include OR condition
+		return 1;	//returning function
+	else
+		return (x*factorial(x-1));	//returning factorial
+}
+void main()
+{
+	clrscr();
+	int num,f;	//declaration
+	printf("\nEnter a number to find factorial :");
+	scanf("%d",&num);	//scanning and storing
+	f = factorial(num);	//function call with actual parameter
+	printf("\nFactorial of %d is %d",num ,f);	//printing num & factorial
+	getch();
+}
+*/
+
+
+
+
+/*
+//program to generate multiplication table
+void main()
+{
+	int num ;		//variables declarations
+	clrscr();		//clear previous output
+	printf("\nEnter a integer number : ");         //printing
+	scanf("%d",&num);			//scanning & storing
+	for(int i = 1 ; i <= 12 ; i ++)	 	//for loop to repeat 12 times
+	{
+		printf("\n%d * %d = %d",num,i,num*i);    //printing multi. table
+	}
+	getch();	holds output screen
+}
+*/
+
+
+
+
+
+
+/*
+//Progrm to count number of digits in an integer
+void main()
+{
+	clrscr();	//clear previous output screen
+	int num,len=0 ;		//declaration  and initialization
+	printf("To find the length Enter a Number : ");		//printing
+	scanf("%d",&num);		//scanning and storing
+	if(num < 0)			//if condition
+		num = - num ;		//updation or modulus function
+	for(int i = 0 ; num > 0 ; i ++)
+	{
+		num = num / 10 ;	//progression
+		len += 1 ;		//updation or progression
+	}
+	printf("You have entered a %d digit Number",len);     //printing len value
+	getch();	//holds output screen
+}
+*/
+
+
+
+
+
+/*
+//program to reverse a number
+void main()		//main function , Execution starts from here
+{
+	int num , r = 0 ,rnum = 0 ,onum;	//variable declaration
+	clrscr();           		      //clearing previous output
+	printf("\nfor reversing Enter a Number : ");		//printing
+	scanf("%d",&num);		//scanning and storing
+	onum = num;  	//onum => original num
+	printf("\nThe number you entered is : %d",num);
+	while(num > 0) 		     //while loop works whenever cond. is true
+	{
+		r = num % 10 ;         //r => Remainder when divided by 10
+		rnum = rnum * 10 + r ;	//rnum => reverse number
+		num = num / 10 ;	//progression
+	}                               //body of while loop over
+	printf("\nReverse of %d is %d",onum,rnum);	//printing reverse number
+	getch();
+}
+*/
+
+
+
+
+/*
+//program to check whether a given number is pallindrome or not
+void main()
+{
+	clrscr();                 	//rnum => reverse num
+	int num , rnum = 0 , numcpy;	//declaration and initialization
+	printf("\nTo check pallindrome Enter a Number : ");
+	scanf("%d",&num);	//scanning and storing
+	numcpy = num ;		//saving original value in another variable
+	for(; num > 0 ; num = num / 10 )
+	{
+		rnum = rnum * 10 ;
+		rnum = rnum + ( num % 10 ) ;
+//		rnum = (rnum * 10) + (num % 10) ;    //alternate Expression
+	}
+	printf("\nReverse of %d is %d",numcpy,rnum);
+	if(numcpy == rnum )
+		printf("\nTherefore %d is a pallindrome number",numcpy);
+	else
+		printf("\nTherefore %d is not a pallindrome number",numcpy);
+
+	getch();
+}
+*/
+
+
+
+
+/*
+// program to check whether a number is prime or non
+void main()
+{
+	clrscr();
+	int num,count = 1;	//declaration
+	printf("\nEnter a integer number to check prime :");	//printing
+	scanf("%d",&num);		//scanning and storing
+	for(int i = 2 ; i <= (num/2) ; i++)	//for loop
+	{                        //for(initialization;condition;progression)
+		if(num % i == 0)	//if condition
+		{
+			count = 0;	//updatation
+			break ;		//Break the loop
+		}
+	}
+	if(count == 1)		//if condition
+		printf("\n%d is a prime number",num);	//printing num
+	else
+//		if(count == 0)		//else if condition
+			printf("\n%d is not a prime number",num);
+	getch();
+}
+*/
+
+
+
+
+/*
+//program to find the largest element in an array
+void main()
+{
+	int arr[20], num ,biggest;	//declaration of variables
+	clrscr();			//clear output screen
+	printf("\nHow many numbers you wants to enter in the array (Max.20): ");
+	scanf("%d",&num);		//scanning & Storing
+	printf("\nEnter the elements of the array : \n");
+	for(int i = 0 ; i < num ; i++)  //for loop to repeat num times
+	{
+		scanf("%d",&arr[i]);	//scanning and storing numbers in array
+	}
+	biggest = arr[0] ;	//initialization big as first element of the array
+	printf("\ncurrently array is :-\n"); 	//printing
+	for(i = 1 ; i < num ; i++)
+	{
+		if(biggest < arr[i])          //checking for biggest element in teh array
+			biggest = arr[i] ;    //if found then store it in  biggest
+	}
+	for(i = 0 ; i < num ; i ++)
+		printf("%3d",arr[i]);		//printing array
+	printf("\nBiggest = %d",biggest);	//printing biggest
+	getch();
+}
+*/
+
+
+
+
+
+/*
+//Program to storing values in an array and printing them
+void main()
+{
+	clrscr();
+	int n,numarr[50];          //arrray declaration
+	printf("How many numbers you wants to enter in an array(max. 50) : ");
+	scanf("%d",&n);
+	printf("\nEnter %d integer numbers followed by spaces or enter key: \n",n);
+	for(int i = 0 ; i < n ; i ++)		//for loop
+	{
+		scanf("%d",&numarr[i]);		//array initialzation
+	}
+	printf("\nThe Numbers you entered are : \n");
+	for(i = 0 ; i < n ; i ++)		//repeting 10 times
+	{
+		printf("%4d",numarr[i]);      // printing all the elements of array
+	}
+	getch();		//holds output screen
+}
+*/
+
+
+
+
+/*
+//c program to find armstrong number
+void main()
+{
+	clrscr();
+	int num,rem,sum = 0,onum; 	//declaration and initialization
+	printf("\nEnter a Integer Number : ");	//printing
+	scanf("%d",&num);                  //scaning and storing
+	onum = num ;                        //onum => original num
+	for(num ; num > 0 ; num = num / 10)	//for loop fetching last digit
+	{
+		rem = num % 10 ;	//rem => remainder
+		sum = sum + (rem*rem*rem) ;	//sum calculation
+	}
+	if(onum == sum)		//checking condition
+		printf("\n%d is a armstrong number ",onum);
+	else
+		printf("\n%d is not a armstrong number ",onum);
+	getch();
+}
+*/
+
+
+
+
+
+/*
+//Program to print pyramid pattern
+void Rtri(int rw)		//non retrurning type function initialization
+{
+	for(int r = 0 ; r < rw ; r ++)		//for(initialization;condition;progression)
+	{
+		for(int c = 0 ; c <= r ; c++)	    //for loop
+			printf(" *");		    //printing r times
+		printf("\n");		//printing rw times
+	}
+}
+void main()
+{
+	clrscr();
+	int rows;		//initialization
+	printf("\nEnter the Numbers of Rows : ");
+	scanf("%d",&rows);		//scaning and storing
+	Rtri(rows);			//function call with single parameter
+	getch();		//holds output screen
+}
+*/
+
+
+
+
+
+/*
+//wap to read n numbers of values in an array and display it in in reverse order
+void main()
+{
+	clrscr();
+	int n,numarr[50];          //arrray declaration
+	printf("How many numbers you wants to enter in an array(max. 50) : ");
+	scanf("%d",&n);
+	printf("\nEnter %d integer numbers followed by spaces or enter key: \n",n);
+	for(int i = 0 ; i < n ; i ++)		//for loop
+	{
+		scanf("%d",&numarr[i]);		//array initialzation
+	}
+	printf("\nThe Numbers you entered are : \n");
+	for(i = 0 ; i < n ; i ++)		//repeting n times
+	{
+		printf("%4d",numarr[i]);      // printing all the elements of array
+	}
+	for(i = 0 ; i < n/2 ; i ++)	//swaping  half array
+	{
+		int temp = numarr[i] ;	//swaping using 3rd variable
+		numarr[i] = numarr[n-1-i] ;
+		numarr[n-1-i] = temp ;
+	}
+	printf("\nThe Numbers in reverse order is : \n");
+	for(i = 0 ; i < n ; i ++)		//repeting n times
+	{
+		printf("%4d",numarr[i]);      // printing all the elements of array
+	}
+	getch();		//holds output screen
+}
+*/
+
+
+
+
+/*
+//wap to find sum of all elements of the array
+void main()
+{
+	clrscr();
+	int n,arr[50],sum = 0 ;          //arrray declaration
+	printf("How many numbers you wants to enter in an array(max. 50) : ");
+	scanf("%d",&n);
+	printf("\nEnter %d integer numbers : \n",n);
+	for(int i = 0 ; i < n ; i ++)		//for loop
+	{
+		scanf("%d",&arr[i]);		//array initialzation
+	}
+	printf("\nThe Numbers you entered are : \n");
+	for(i = 0 ; i < n ; i ++)		//repeting n times
+	{
+		sum = sum + arr[i] ;
+		printf("%4d",arr[i]);      // printing all the elements of array
+	}
+	printf("\nSum = %d",sum);
+	getch();
+}
+*/
+
+
+
+
+
+/*
+//wap to copy elements of one array into another array
+void main()
+{
+	clrscr();
+	int n,arr1[50],arr2[50];          //arrray declaration
+	printf("How many numbers you wants to enter in an array(max. 50) : ");
+	scanf("%d",&n);
+	printf("\nEnter %d integer numbers : \n",n);
+	for(int i = 0 ; i < n ; i ++)		//for loop
+	{
+		scanf("%d",&arr1[i]);		//array initialzation
+	}
+	printf("\narray - 1 is  : \n");
+	for(i = 0 ; i < n ; i ++)		//repeting n times
+	{
+		arr2[i] = arr1[i] ;
+		printf("%4d",arr1[i]);      // printing all the elements of array
+	}
+	printf("\narray - 2 is  : \n");
+	for(i = 0 ; i < n ; i ++)		//repeting n times
+	{
+		printf("%4d",arr2[i]);      // printing all the elements of array
+	}
+	getch();
+}
+*/
+
+
+
+
+
+
+/*
+//wap to find the square of any number using function
+int find_square(int n)
+{
+	return n*n ;
+}
+void main()
+{
+	int num , sq ;		//variables declarations
+	clrscr();		//clear previous output
+	printf("\nEnter a Integer number to find square : ");	//printing
+	scanf("%d",&num);		//scaning and storing
+	sq = find_square(num);	//function call		//function call
+	printf("Square of %d is %d",num,sq);	   //printing sqaure value
+	getch();
+}
+*/
+
+
+
+
+/*
+//wap to print first 50 natural numbers using recursion
+int print50(int n)                 //function initialization (formal parameter)
+{
+	if(n > 50)		//termination condition for recursion
+		return 0 ;	//returning value
+	else
+	{
+		printf("%3d",n);	//printing numbers
+		n++ ;			//updating the value of n
+		print50(n);             //function call (Recursion)
+
+	}
+	return 0 ;
+}
+void main()
+{
+	clrscr();		//clear previous output
+	print50(1);		//function call (actual parameter)
+	getchar();		//holds output screen
+}
+*/
+
+
+
+
+
+/*
+//wap to count the digits of a given number using recursion
+int dig = 0 ;			       //Global Variables
+int find_digits(int n)                //func.init.with Formal argument
+{
+	if(n <= 0)		//termination condition for recursion
+		return dig ;	//returning value
+	else
+	{
+		dig++ ;           //progression
+		n = n / 10 ;		//updation
+		find_digits(n);        //function call with actual parameter
+	}
+//	return dig ;
+}
+void main()
+{
+	int num , nod ;		//nod => no. of digits
+	clrscr();       		//clear prev. output
+	printf("\nEnter a number : ");       //printing
+	scanf("%d",&num);		  //scaning
+	nod = find_digits(num);			//function call
+	printf("Number of digits in %d is %d",num,nod);    //printing values of num and nod
+	getch();				//holds output screen
+}
+*/
