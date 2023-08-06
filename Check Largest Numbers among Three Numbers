@@ -1,0 +1,26 @@
+//Program to Check Largest Numbers among Three Numbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	clrscr();
+	int a,b,c;      //declaration
+	printf("\nEnter values of a , b , c : ");
+	scanf("%d %d %d",&a,&b,&c);	//scanning and storing
+	if(a>b)		//if condition
+	{
+		if(a>c)               //nested if condition
+			printf("\n%d i.e a is the Biggest number",a);
+		else		      //if condition false then else executes
+			printf("\n%d i.e c is the Biggest number",c);
+	}
+	else
+	{
+		if(b>c)		//nested else if
+			printf("\n%d i.e. b is the Biggest number",b);
+		else
+			printf("\n%d i.e. c is the Biggest number",c);
+	}
+	getch();
+}
