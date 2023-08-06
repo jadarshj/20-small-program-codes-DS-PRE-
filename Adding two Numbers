@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+
+//program to add two Integers using functions
+int add(int x, int y)	//function initialization
+{
+	return (x+y);		//returning value
+}
+
+void main()		//execution starts from main() function
+{
+	clrscr();	//clear previous output
+	int a,b,c;		//variables declarations
+	printf("\nEnter the value of a and b followed by a space :");
+	scanf("%d %d",&a,&b);		//scanning & storing
+	c = add(a,b);			//function call with parameter
+	printf("\n%d + %d = %d",a,b,c);		//printing values of variables
+	getch();				//hold output screen
+}
