@@ -1,0 +1,17 @@
+//Program to Swap Two numbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	clrscr();
+	int a,b;        	//declaration
+	printf("Enter Two integers Number to swap their Values : ");
+	scanf("%d %d",&a,&b);                //scanning & storing
+	printf("\nBefore swapping values are \na = %d \nb = %d: ",a,b);
+	a = a + b ;		//Swapping values
+	b = a - b ;		//a=10 , b=20
+	a = a - b ;             //a=30 , b=10
+	printf("\nAfter Swapping values are \na = %d\nb = %d ",a,b);
+	getch();
+}
