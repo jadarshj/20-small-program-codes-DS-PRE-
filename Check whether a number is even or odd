@@ -1,0 +1,22 @@
+//Program to Check whether a number is even or odd
+
+#include<stdio.h>
+#include<conio.h>
+
+findevod(int n)                         //function initialization
+{
+	if(n % 2 == 0)		//if condition
+		printf("\n%d is an Even Number",n); 	//printf if n = even
+	else
+		printf("\n%d is an Odd Number",n);	//printf if n = odd
+}
+
+void main()
+{
+	clrscr();
+	int num;                    //declaration
+	printf("\nEnter number to Check Even or Odd : ");
+	scanf("%d",&num);		//scanning and storing
+	findevod(num);		//function call with parameter
+	getch();
+}
